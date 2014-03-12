@@ -1,0 +1,10 @@
+CREATE TABLE utvalg
+
+(
+
+IDkode INT(6) NOT NULL UNIQUE,  
+Navn CHAR(60) NOT NULL, 
+Kategori CHAR(30) NOT NULL, 
+
+PRIMARY KEY(IDkode)
+)
