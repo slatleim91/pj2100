@@ -1,5 +1,7 @@
 <?php
 
+//require 'setAktivitet.php';
+//$aktivSetter = new setAktivitet();
 error_reporting(0);
 //try{
 $filename =  $_GET['url'] . '.php';

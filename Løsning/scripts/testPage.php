@@ -33,8 +33,10 @@ class testPage {
 			// Utskrift av studentutvalg
 			for($i = 0; $i < count($result); $i++){
 				
+
 				echo '
 					<div class = utvalg>
+						<a href=index.php?url=aktivitet&navn='.$result[$i]['Navn'].'>LINK</a>
 						<img src="/uploads/'.$result[$i]['Bilde'].'"/>
 						<p class = tittel>'.$result[$i]['Navn'].'</p>
 						<p class = beskrivelse>'.$result[$i]['Oppsummering'].'</p>
