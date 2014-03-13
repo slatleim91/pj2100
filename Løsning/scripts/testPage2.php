@@ -13,6 +13,7 @@ class testPage2 {
 			// Oppkobling til database
 		//	$database = new PDO("mysql:host=$mysql_host;dbname=$mysql_dbname", $mysql_user, $mysql_pass);
 			
+			$_SESSION['TEST'] = 'TEST';
 			echo '<a href="index.php?url=testPage"> TEST </a>';
 			
 			// Definering, preparering og kjøring av query - lagring av resultat

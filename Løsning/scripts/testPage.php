@@ -4,6 +4,13 @@ class testPage {
 
 	public function showPage(PDO $database) {
 		
+		
+		if($_SESSION['TEST'] != 'TEST') {
+		header("Location: index.php?url=testPage2");
+
+		}
+		
+		
 		// Variabler for database
 		//	$mysql_host = 'localhost'; 
 		//	$mysql_user = 'root'; 
@@ -13,6 +20,7 @@ class testPage {
 			// Oppkobling til database
 		//	$database = new PDO("mysql:host=$mysql_host;dbname=$mysql_dbname", $mysql_user, $mysql_pass);
 			
+			//$_SESSION['TEST'] = 'TEST';
 			echo '<a href="index.php?url=testPage2"> TEST </a>';
 			
 			// Definering, preparering og kjøring av query - lagring av resultat
