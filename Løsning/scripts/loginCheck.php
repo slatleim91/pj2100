@@ -30,7 +30,7 @@ class loginCheck {
 			
 		}
 		
-		header("Location: index.php?url=login");
+		header("Location: index.php?url=login&error=1");
 	
 	
 	}

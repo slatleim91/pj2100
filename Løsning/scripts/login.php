@@ -4,7 +4,11 @@ class login {
 
 	public function showPage($database) {
 	
-
+		error_reporting(0);
+		if($_GET['error'] == 1) {
+		echo 'Feil Email eller passord';
+		}	
+		error_reporting(-1);
 
 		echo'
 		<form action="index.php?url=loginCheck" method="post">
