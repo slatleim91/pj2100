@@ -29,12 +29,14 @@
 			
 				// Oppkobling til database
 				$database = new PDO("mysql:host=$mysql_host;dbname=$mysql_dbname", $mysql_user, $mysql_pass);
+				
+				
 				if($_SESSION['login'] == 'Admin' || $_SESSION['login'] == 'Student'){
 				
-				echo '<a href=index.php?url='.$_GET['url'].'&logout=1>Logout</a>';
+				echo 'Logget inn som '.$_SESSION['login'].' '.'<a href=index.php?url='.$_GET['url'].'&logout=1>Logout</a>';
 				
 				} else {
-				echo '<a href=index.php?url=login>Login</a>';
+				echo '<a href=index.php?url=login>Login</a>'.' <a href=index.php?url=signup>Signup</a>';
 				}
 	
 		?>
