@@ -1,4 +1,4 @@
--- Marker delen av scriptet du ønsker å kjøre.
+-- Marker delen av scriptet du ønsker å kjøre
 
 
 
