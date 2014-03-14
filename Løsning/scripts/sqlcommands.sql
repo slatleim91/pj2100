@@ -1,12 +1,18 @@
 -- Marker delen av scriptet du ønsker å kjøre.
--- DROP TABLE tabellnavn for å slette table
 
 
 
+-- For fjerning av tabell utvalg
+DROP TABLE utvalg;
+
+-- For fjerning av tabell bruker
+DROP TABLE bruker;
+
+
+-- Opprett tabell 'utvalg'
 CREATE TABLE utvalg
 (
 
--- Opprett tabell 'utvalg'
 Navn VARCHAR(55) NOT NULL UNIQUE,
 Oppsummering VARCHAR(100) NOT NULL DEFAULT '', 
 Kategori ENUM('Musikk og Media', 'Idrett og Friluft', 'Skole', 'Spill ', 'Utvikling', 'Annet') NOT NULL DEFAULT 'Annet', 
@@ -23,9 +29,10 @@ CREATE TABLE bruker
 (
 
 MailAdr VARCHAR(255) NOT NULL UNIQUE, 
-Navn VARCHAR (200) NOT NULL DEFAULT 'ukjent',
+Fornavn VARCHAR (80) NOT NULL DEFAULT 'ukjent',
+Etternavn VARCHAR (160) NOT NULL DEFAULT 'ukjent',
 Passord VARCHAR (50) NOT NULL, 
-Staus ENUM('Admin', 'Student'),
+Adgang ENUM('Admin', 'Student'),
 
 PRIMARY KEY (MailAdr)
 
@@ -35,8 +42,8 @@ PRIMARY KEY (MailAdr)
 INSERT INTO utvalg
 VALUES
 
-('tmbv93@gmail.com', 'Are Administrator', '123abc', 'Admin'),
-('veitom13@nith.no', 'Stian Student', 'eple', 'Student');
+('tmbv93@gmail.com', 'Are', 'Bjoernsen', '123abc', 'Admin'),
+('veitom13@nith.no', 'Stian', 'Eriksen', 'eple', 'Student');
 
 
 -- Sett verdier i 'utvalg'
