@@ -22,10 +22,10 @@
 				error_reporting(-1);
 		
 				// Variabler for database
-				$mysql_host = 'localhost'; 
-				$mysql_user = 'root'; 
-				$mysql_pass = '';
-				$mysql_dbname = 'westerdals_data';
+				$mysql_host = 'mysql.nith.no'; 
+				$mysql_user = 'johand13'; 
+				$mysql_pass = 'johand13';
+				$mysql_dbname = 'johand13';
 			
 				// Oppkobling til database
 				$database = new PDO("mysql:host=$mysql_host;dbname=$mysql_dbname", $mysql_user, $mysql_pass);

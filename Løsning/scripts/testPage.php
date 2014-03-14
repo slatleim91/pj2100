@@ -5,11 +5,6 @@ class testPage {
 	public function showPage(PDO $database) {
 		
 		
-		if($_SESSION['TEST'] != 'TEST') {
-		header("Location: index.php?url=testPage2");
-
-		}
-		
 		
 		// Variabler for database
 		//	$mysql_host = 'localhost'; 
@@ -21,7 +16,7 @@ class testPage {
 		//	$database = new PDO("mysql:host=$mysql_host;dbname=$mysql_dbname", $mysql_user, $mysql_pass);
 			
 			//$_SESSION['TEST'] = 'TEST';
-			echo '<a href="index.php?url=testPage2"> TEST </a>';
+			//echo '<a href="index.php?url=testPage2"> TEST </a>';
 			
 			// Definering, preparering og kjøring av query - lagring av resultat
 			$query = "SELECT * FROM utvalg;";
@@ -37,7 +32,7 @@ class testPage {
 				echo '
 					<div class = utvalg>
 						<a href=index.php?url=aktivitet&navn='.$result[$i]['Navn'].'>LINK</a>
-						<img src="/uploads/'.$result[$i]['Bilde'].'"/>
+						<img src="./bilder/'.$result[$i]['Bilde'].'"/>
 						<p class = tittel>'.$result[$i]['Navn'].'</p>
 						<p class = beskrivelse>'.$result[$i]['Oppsummering'].'</p>
 					</div>';
