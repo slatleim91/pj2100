@@ -11,9 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="stil.css">
 		<?php
 		
-				session_start();
-				echo $_SESSION['login'];
 				error_reporting(0);
+				session_start();
 				if($_GET['logout'] == 1) {
 				
 				$_SESSION['login'] = 'Guest';
