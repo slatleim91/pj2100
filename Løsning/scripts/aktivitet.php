@@ -3,7 +3,6 @@
 class aktivitet {
 
 	public function showPage($database) {
-		
 		$navn = $_GET['navn'];
 		//echo '<br>'.$navn.'<br>';
 		$query = "SELECT * FROM utvalg WHERE Navn = '".$navn."'";

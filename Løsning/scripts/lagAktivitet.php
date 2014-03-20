@@ -24,7 +24,7 @@ public function showpage($database) {
 		</select><br>
 		Bilde: (navn bildefil)<input type="text" name="bilde"><br>
 		<TEXTAREA NAME="tekst" ROWS=5 COLS=50 ></TEXTAREA><br>
-		<input type="submit" value= "Lag Aktivitet">
+		<input type="submit">
 		</form>';
 		//tekst: <input type="text" name="tekst"><br>
 	}

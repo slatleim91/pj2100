@@ -6,11 +6,14 @@
 	<head>	
 	
 		
-		<title> Westerdals </title>
+		<title> Westerdals - Studentutvalg</title>
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet" type="text/css" href="stil.css">
+		</head>
+		<header>
 		<?php
-		
+				//header('Content-Type: text/html; charset=');
+				//<meta charset="ISO-8859-1">
 				error_reporting(0);
 				session_start();
 				if($_GET['logout'] == 1) {
@@ -22,18 +25,20 @@
 				error_reporting(-1);
 		
 				// Variabler for database
-				//$mysql_host = 'mysql.nith.no'; 
-				//$mysql_user = 'johand13'; 
-				//$mysql_pass = 'johand13';
-				//$mysql_dbname = 'johand13';
+				$mysql_host = 'mysql.nith.no'; 
+				$mysql_user = 'johand13'; 
+				$mysql_pass = 'johand13';
+				$mysql_dbname = 'johand13';
 				
-				$mysql_host = 'localhost'; 
-				$mysql_user = 'root'; 
-				$mysql_pass = '';
-				$mysql_dbname = 'westerdals_data';
+				//$mysql_host = 'localhost'; 
+				//$mysql_user = 'root'; 
+				//$mysql_pass = '';
+				//$mysql_dbname = 'westerdals_data';
 			
 				// Oppkobling til database
-				$database = new PDO("mysql:host=$mysql_host;dbname=$mysql_dbname", $mysql_user, $mysql_pass);
+				$database = new PDO("mysql:host=$mysql_host;dbname=$mysql_dbname", $mysql_user, $mysql_pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+				//mysql_set_charset("UTF8", $database);
+				//mysql_set_charset('utf8');
 				echo '<a id="home"href=index.php?url=frontpage><img id="logo"src="./bilder/home_btn.png"/></a><br>';
 				echo '<div id=head></div>';
 				error_reporting(0);				
@@ -50,6 +55,6 @@
 		?>
 
 
-	</head>
+	</header>
 	
 <body>

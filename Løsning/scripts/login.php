@@ -11,11 +11,13 @@ class login {
 		error_reporting(-1);
 
 		echo'
+		<span class="innlogging">
 		<form action="index.php?url=loginCheck" method="post">
 		<br>E-mail:   <input type="text" name="email"><br>
 		Password: <input type="password" name="pass"><br>
 		<input type="submit" value ="Login">
-		</form>';
+		</form>
+		</span>';
 		//error_reporting(0);
 		//$_SESSION['loginEmail'] = $_POST["email"];
 		//$_SESSION['loginPass'] = $_POST["pass"];

@@ -11,13 +11,15 @@ public function showPage($database) {
 		}
 		error_reporting(-1);
 		echo'
+		<span class="innlogging">
 		<form action="index.php?url=signupCheck" method="post">
 		E-mail: <input type="text" name="email"><br>
 		Fornavn: <input type="text" name="fornavn"><br>
 		Etternavn: <input type="text"  name="etternavn"><br>
 		Password: <input type="password" name="pass"><br>
 		<input type="submit">
-		</form>';
+		</form>
+		</span>';
 		
 		
 

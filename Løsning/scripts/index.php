@@ -18,6 +18,7 @@ $classname = 'frontpage';
 }
 
 require 'header.php';
+header('Content-Type: text/html; charset=UTF8');
 require $filename;
 $kode = new $classname();
 

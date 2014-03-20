@@ -15,6 +15,8 @@ public function showpage($database) {
 				}
 	
 			}*/
+			
+			echo '<h1 id = resultat>Her er noen utvalg som kan passe deg!</h1>';
 			error_reporting(-1);
 			//echo $kategori;
 			error_reporting(0);
@@ -33,9 +35,9 @@ public function showpage($database) {
 							<div class = utvalg>
 								<img src="./bilder/'.$result[$i]['Bilde'].'"/>
 								<p class = tittel>'.$result[$i]['Navn'].'</p>
-								<p class = beskrivelse>'.$result[$i]['Oppsummering'].'</p>
 							</div>
 						</a>';
+						//<p class = beskrivelse>'.$result[$i]['Oppsummering'].'</p>
 		
 			
 			}

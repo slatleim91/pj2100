@@ -37,8 +37,9 @@ public function student($database) {
 	//var_dump($result);
 		for($i = 0; $i < count($result); $i++){
 
-				echo '<p>'.$result[$i]['UtvalgID'].'</p>';
-				
+				//echo '<p>'.$result[$i]['UtvalgID'].'</p>';
+				echo '<a class = utvalg href=index.php?url=aktivitet&navn='.urlencode($result[$i]['UtvalgID']).'>'.$result[$i]['UtvalgID'].'</a>';
+				echo '<br>';
 		}
 	}
 
