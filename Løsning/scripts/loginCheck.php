@@ -17,16 +17,17 @@ class loginCheck {
 
 		for($i = 0; $i < count($result); $i++){
 				
-			echo $result[$i]['MailAdr'];
-			echo $result[$i]['Passord'];
+			//echo $result[$i]['MailAdr'];
+			//echo $result[$i]['Passord'];
 			
 			
 			if($result[$i]['MailAdr'] == $_POST['email'] && $result[$i]['Passord'] == $_POST['pass']) {
 			
-			$_SESSION['login'] = ''.$result[$i]['Adgang'];
-			
-			echo 'ok';
-			header("Location: index.php?url=loginSuccess");
+			$_SESSION['login'] = $result[$i]['Adgang'];
+			$_SESSION['username'] = $result[$i]['MailAdr'];
+			//echo $_SESSION['username'];
+			echo ' ok';
+			header("Location: index.php?url=frontpage");
 			die();
 			}
 			

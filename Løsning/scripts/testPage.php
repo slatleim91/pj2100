@@ -2,7 +2,7 @@
 
 class testPage {
 
-	public function showPage(PDO $database) {
+	public function showPage($database) {
 		
 		
 		
@@ -24,14 +24,15 @@ class testPage {
 			$query_run->execute();
 			
 			$result = $query_run->fetchAll();
-			
+			echo 'test';
 			// Utskrift av studentutvalg
 			for($i = 0; $i < count($result); $i++){
 				
-
+				//$navn = str_replace(' ', '%20', $result[$i]['Navn'];
+				//$navn = urlencode($result[$i]['Navn']);
 				echo '
 					<div class = utvalg>
-						<a href=index.php?url=aktivitet&navn='.$result[$i]['Navn'].'>LINK</a>
+						<a href=index.php?url=aktivitet&navn='.urlencode($result[$i]['Navn'].'>LINK</a>
 						<img src="./bilder/'.$result[$i]['Bilde'].'"/>
 						<p class = tittel>'.$result[$i]['Navn'].'</p>
 						<p class = beskrivelse>'.$result[$i]['Oppsummering'].'</p>

@@ -13,8 +13,8 @@ error_reporting(-1);
 if(!file_exists($filename)) 
  {
 
-$filename = 'testPage.php';
-$classname = 'testPage';
+$filename = 'frontpage.php';
+$classname = 'frontpage';
 }
 
 require 'header.php';
